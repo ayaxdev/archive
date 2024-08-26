@@ -18,3 +18,4 @@ Still, if some developer is not pleased with these sources being open, Either a 
 | Argon Legacy       | 1.8.9        | An attempt at porting some (?) Argon version to 1.8.9.           | 05.05.2024             |
 | Atani NextGen      | 1.8.9        | The first attempt at remaking Atani. It went nowhere.            | 30.01.2024             |
 | Datsuzei           | 1.8.9        | A really simple pvp client. Was originally open-source.          | 13.01.2024             |
+| Atlas              | 1.8.9        | A client created with the idea of being fully pasted.            | 31.03.2024             |
