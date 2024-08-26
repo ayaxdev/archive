@@ -1,0 +1,30 @@
+{
+  "required": true,
+  "package": "net.jezevcik.argon.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "ClientConnectionMixin",
+    "EntityMixin",
+    "LivingEntityMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "client": [
+    "ClientPlayerEntityMixin",
+    "ClientPlayNetworkHandlerMixin",
+    "ClientWorldMixin",
+    "DrawContextAccessor",
+    "GameRendererMixin",
+    "InGameHudMixin",
+    "KeybindingAccessor",
+    "KeybindingMixin",
+    "KeyboardInputMixin",
+    "KeyboardMixin",
+    "MinecraftClientAccessor",
+    "MinecraftClientMixin",
+    "TextFieldWidgetAccessor",
+    "TextRendererMixin",
+    "ToastManagerMixin"
+  ]
+}

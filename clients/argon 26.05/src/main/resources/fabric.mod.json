@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "id": "argon",
+  "version": "${version}",
+  "name": "Argon",
+  "description": "The greatest toggle sprint mod of all time",
+  "authors": [
+    "jezevčík"
+  ],
+  "contact": {
+    "repo": "https://argon-client-developers.com/top-secret-git-repository.git"
+  },
+  "license": "All-Rights-Reserved",
+  "icon": "assets/argon/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "main": [
+      "ja.tabio.argon.Argon"
+    ]
+  },
+  "mixins": [
+    "argon.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}

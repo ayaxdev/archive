@@ -1,0 +1,34 @@
+{
+	"schemaVersion": 1,
+	"id": "parekclient",
+	"version": "${version}",
+	"name": "Párek client",
+	"description": "Háčkovací klajent pro pravé párkisty!",
+	"authors": [
+		"Já"
+	],
+	"contact": {
+		"github": "https://github.com/parkopes",
+		"discord": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "All rights reserved",
+	"icon": "assets/parekclient/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.jezevcik.argon.ParekClient"
+		]
+	},
+	"mixins": [
+		"parekclient.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.15.11",
+		"minecraft": "~1.20.6",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}

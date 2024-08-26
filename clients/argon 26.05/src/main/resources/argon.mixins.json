@@ -1,0 +1,35 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "ja.tabio.argon.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "ClientConnectionMixin",
+    "EntityMixin",
+    "LivingEntityMixin",
+    "PlayerEntityMixin"
+  ],
+  "client": [
+    "ClientPlayerEntityMixin",
+    "ClientPlayerInteractionManagerMixin",
+    "ClientPlayNetworkHandlerMixin",
+    "DrawContextAccessor",
+    "GameRendererAccessor",
+    "GameRendererMixin",
+    "InGameHudMixin",
+    "KeybindingAccessor",
+    "KeyBindingMixin",
+    "KeyboardInputMixin",
+    "KeyboardMixin",
+    "LoadingOverlayMixin",
+    "MainMixin",
+    "MinecraftClientAccessor",
+    "MinecraftClientMixin",
+    "NativeImageAccessor",
+    "ReconfiguringScreenAccessor",
+    "ToastManagerMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

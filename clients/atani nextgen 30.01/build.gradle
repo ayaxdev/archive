@@ -1,0 +1,67 @@
+plugins {
+    id 'application'
+    id 'java'
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_21
+    targetCompatibility = JavaVersion.VERSION_21
+}
+
+[compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
+
+tasks.withType(JavaCompile).configureEach {
+    it.options.release = 21
+    it.options.compilerArgs.add('--enable-preview')
+}
+
+group 'io.github.liticane.atani'
+version '1.0-A'
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+
+    maven {
+        url 'https://litarvan.github.io/maven'
+    }
+
+    maven {
+        url 'https://repo.viaversion.com/everything/'
+    }
+
+    maven {
+        name = "meteor-maven"
+        url = "https://maven.meteordev.org/releases"
+    }
+
+    maven {
+        url 'https://jitpack.io'
+    }
+}
+
+configurations {
+    implementation.extendsFrom lib
+    api.extendsFrom lib
+}
+
+dependencies {
+    // Via version
+    implementation group: 'com.viaversion', name: 'viaversion', version: '4.9.0-23w45a-SNAPSHOT'
+    implementation group: 'com.viaversion', name: 'viabackwards', version:'4.9.0-23w45a-SNAPSHOT'
+    implementation group:'com.viaversion', name:'viarewind-common', version:'3.0.4-SNAPSHOT'
+    implementation group: 'org.yaml', name: 'snakeyaml', version: '2.2'
+
+    // Lombok
+    compileOnly group:'org.projectlombok', name:'lombok', version: '1.18.30'
+    annotationProcessor group:'org.projectlombok', name:'lombok', version: '1.18.30'
+
+    // Atani's other dependencies
+    implementation group: 'org.reflections', name: 'reflections', version: '0.10.2'
+    implementation group: 'com.google.code.gson', name: 'gson', version: '2.10.1'
+    implementation group: 'org.apache.ant', name: 'ant-compress', version: '1.5'
+    implementation group: 'com.github.FlorianMichael', name: 'RClasses', version: 'v2.4.0'
+
+    // Minecraft's dependencies
+    implementation fileTree('library')
+}
